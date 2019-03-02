@@ -2,8 +2,13 @@
 ## 项目介绍  
 在掘金看到了两篇文章 [用Node+wechaty写一个爬虫脚本每天定时给女(男)朋友发微信暖心话](https://juejin.im/post/5c77c6bef265da2de6611cff)
 以及[用Node + EJS写一个爬虫脚本每天定时女朋友发一封暖心邮件](https://juejin.im/post/5c75fa4af265da2d84109219)，感觉很有意思，就试着自己也做了一个出来   
-在原有的基础上，使用配置文件去配置发送信息  
+在原有的基础上，使用配置文件去配置发送信息，目测肯定有bug T_T
 
+## 项目启动
+```Javascript
+npm install
+npm run start
+```
 ## 配置文件
 ```JavaScript
 module.exports = {
