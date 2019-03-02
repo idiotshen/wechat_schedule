@@ -1,18 +1,22 @@
-# wechat_schedule  
-## 项目介绍  
+## 介绍  
 在掘金看到了两篇文章 [用Node+wechaty写一个爬虫脚本每天定时给女(男)朋友发微信暖心话](https://juejin.im/post/5c77c6bef265da2de6611cff)
 以及[用Node + EJS写一个爬虫脚本每天定时女朋友发一封暖心邮件](https://juejin.im/post/5c75fa4af265da2d84109219)，感觉很有意思，就试着自己也做了一个出来   
-在原有的基础上，使用配置文件去配置发送信息，目测肯定有bug T_T
+使用配置文件去配置发送信息，不过目测肯定有bug T_T
+
+### github地址  
+https://github.com/idiotshen/wechat_schedule
 
 ## 项目启动
 ```Javascript
 npm install
 npm run start
 ```
+点击控制台上的连接，微信扫码登陆即可
 ## 配置文件
 ```JavaScript
+// config/message.js
 module.exports = {
-  'xxx': [   // key 为要发的联系人的名称
+  'xxx': [   // key 为要发的联系人的名称, 如果想一次发多条，再建一个对象即可
     {
       contactName: 'xxx',
       placeholder: {
@@ -88,5 +92,13 @@ module.exports = {
                 '{{jd.whwswswws}}<br>' +
                 '我们认识{{know}}天了<br>'
     }
+  ]
+}
+
+// /config/base
+module.exports = {
+  contactList: [  // 这是想要发送消息的联系人的列表
+    'xxxx',
+    'xxxxx'
   ]
 }
