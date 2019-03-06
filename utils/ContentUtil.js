@@ -41,4 +41,3 @@ function parseContent (config) {
   return content
 }
 
-module.exports.getContent('林伟健')
